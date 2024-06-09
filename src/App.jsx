@@ -1,34 +1,33 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import Todos from './components/Todos';
 
 function App() {
   const [todos, setTodos] = useState([
     {
       id: 1,
       title: 'Finish Progate React Course',
-      completed: false,
+      completed: false
     },
     {
       id: 2,
       title: 'Have lunch with Guru Domba',
-      completed: false,
+      completed: false
     },
     {
       id: 3,
       title: 'Study React with Ninja Ken',
-      completed: false,
-    },
-  ])
+      completed: false
+    }
+  ]);
 
-  console.log(todos)
+  console.log(todos);
 
   return (
     <div>
       <h1>My Todo List</h1>
-      {todos.map((todo) => {
-        return <p key={todo.id}>{todo.title}</p>
-      })}
+      <Todos todos={todos} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
